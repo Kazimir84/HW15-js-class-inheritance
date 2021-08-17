@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.hidden {
+    display: none;    
+}
+#hours {
+    position: absolute;
+    left: 35%;
+    top: 15%;
+    font-size: 50px;
+    color: blue;   
+    text-shadow: 0px 0px 10px blue;
+  }
+  #minuts {
+    position: absolute;
+    left: 41%;
+    top: 15%;
+    font-size: 50px;
+    color: blue;   
+    text-shadow: 0px 0px 10px blue;
+  }
+  #seconds {
+    position: absolute;
+    left: 46%;
+    top: 15%;
+    font-size: 50px;
+    color: blue;   
+    text-shadow: 0px 0px 10px blue;
+  }
+#clockTime {
+    position: absolute;
+    left: 35%;
+    top: 15%;
+    font-size: 50px;
+    color: blue;   
+    text-shadow: 0px 0px 10px blue;
+  }
