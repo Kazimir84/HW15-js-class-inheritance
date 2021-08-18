@@ -6,7 +6,7 @@ function Clock() {
         setInterval(this.render.bind(this), 250);
     };
     
-    clockTime.addEventListener('click', () => {this.format()});
+    
     this.clockTime = document.getElementById('clockTime');
 
     this.render = function() {
@@ -19,11 +19,20 @@ function Clock() {
         } else {
             this.clockTime.innerHTML = this.hours + ":" + this.minutes; 
         }; 
-    };
-    this.format = function() {
-        this.clockTime.classList.toggle('fullFormat'); 
-    };    
+    };     
 };
+
+clockTime.addEventListener('click', () => {this.format()});
+
+this.format = function() { 
+    if (this.clockTime.classList.contains('fullFormat')) {       
+        clockFullFormat.render();
+        this.clockTime.classList.remove('fullFormat');        
+    } else {
+        clockShortFormat.render();
+        this.clockTime.classList.add('fullFormat')        
+    }; 
+};   
 
 function ClockFullFormat(){
     Clock.call(this);   
@@ -31,16 +40,12 @@ function ClockFullFormat(){
 
 function ClockShortFormat(){
     Clock.call(this);    
-    this.render = function () {
-        if (this.clockTime.classList.contains('fullFormat')) {
-            this.clockTime.innerHTML = this.getTime().getHours() + ':' + this.getTime().getMinutes(); 
-        } else {
-            this.clockTime.innerHTML = this.getTime().getHours() + ":" + this.getTime().getMinutes() + ":" + this.getTime().getSeconds();
-        };
+    this.render = function () {       
+        this.clockTime.innerHTML = this.getTime().getHours() + ':' + this.getTime().getMinutes();        
     }; 
 };
 let clock = new Clock();
-// clock.start();
+clock.start();
 
 ClockFullFormat.prototype = new Clock();
 ClockShortFormat.prototype = new Clock();
@@ -49,6 +54,6 @@ let clockFullFormat = new ClockFullFormat();
 let clockShortFormat = new ClockShortFormat();
 
 // let fullFormat = clockFullFormat.start();
-let shortFormat = clockShortFormat.start();
+// let shortFormat = clockShortFormat.start();
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
