@@ -41,7 +41,7 @@ let clockFullFormat = new СlockFullFormat();
 let clockShortFormat = new СlockShortFormat();
 
 // clockFullFormat.prototype, clockShortFormat.prototype = new Clock();
-// let clockContainer = document.getElementById('clockTime');
+
 clockFullFormat.start();
 
 this.clockTime.addEventListener('click', () => {
