@@ -1,5 +1,4 @@
-function Clock(){   
-        this.currTime = new Date(); 
+function Clock(){          
         this.clockTime = document.getElementById('clockTime')
         this.getTime = function() {
             return new Date()
