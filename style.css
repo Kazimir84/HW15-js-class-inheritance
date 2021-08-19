@@ -2,9 +2,6 @@
     margin: 0;
     padding: 0;
 }
-.hidden {
-    display: none;    
-}
 #hours {
     position: absolute;
     left: 35%;
@@ -30,22 +27,6 @@
     text-shadow: 0px 0px 10px blue;
   }
 #clockTime {
-    position: absolute;
-    left: 35%;
-    top: 5%;
-    font-size: 50px;
-    color: blue;   
-    text-shadow: 0px 0px 10px blue;
-  }
-.shortFormat {
-    position: absolute;
-    left: 35%;
-    top: 5%;
-    font-size: 50px;
-    color: blue;   
-    text-shadow: 0px 0px 10px blue;
-  }
-  .fullFormat {
     position: absolute;
     left: 35%;
     top: 5%;
